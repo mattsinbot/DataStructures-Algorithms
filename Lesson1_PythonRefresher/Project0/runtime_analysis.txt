@@ -1,0 +1,50 @@
+Runtime analysis of Task: 0
+-------------------------------
+Assuming the file has N lines in it and each line has comparable lengths and 
+readin a line takes a constant computaations. Then rading a file of N lines, 
+takes O(N) computations. Also assuming constant computations to convert one 
+line into list, total computation to convert into list is again O(N). Fetching 
+the element of a list is O(1). Hence total computation for task0 is:
+O(N) + O(N) + O(1) ~ O(N).
+
+Same argument for getting last call record hold true. Hence for this task also, 
+O(N) computations are required.
+
+Runtime analysis of Task: 1
+-------------------------------
+2*O(N) to read two files. O(N^2) for the "for" loop and nested existence 
+checking.
+Therefore total computations required O(N) + O(N^2) = O(N^2)
+
+Runtime analysis of Task: 2
+-------------------------------
+O(N) -> for reading the file
+O(N^2) -> O(N) computations for "for loop" * O(N) computations for fetching the keys from the dictionary
+Total = O(N) + O(N^2) ~ O(N^2)
+
+Runtime analysis of Task: 3
+-------------------------------
+Part - A
+-----------
+O(N) -> reading the file and converting in to the list
+O(N^2) -> O(N)(for loop) * O(N)(checking uniqueness)
+O(NlogN) -> for sorting
+O(N) -> print
+Total = O(N) + O(N^2) + O(NlogN) + O(N) ~ O(N^2)
+
+Part - B
+-----------
+O(N) -> reading the file and converting into list
+O(N) -> for the "for" loop
+O(1) -> percentage computation
+Total = O(N) + O(N) + O(1) ~ O(N)
+
+Runtime analysis of Task: 4
+-------------------------------
+O(N^2) -> to get unique numbers in the calls record
+O(N^2) -> to get unique numbers in the texts record
+O(N^2) -> O(N) (if all numbers are unique) * O(N) (if all numbers are telemarketers)
+O(NlogN) -> for sorting
+Total = O(N^2) + O(N^2) + O(N^2) + O(NlogN) ~ O(N^2)
+
+

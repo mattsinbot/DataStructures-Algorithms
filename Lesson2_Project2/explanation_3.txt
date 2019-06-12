@@ -1,0 +1,6 @@
+Implemented "Huffman_Tree" class. The constructor needs one input argument which is the the text message to be encoded. The "encode_message()" method is the main function that encodes the text message and stores it in the class attribute named "encoded_msg". The "encode_message()" calls "pre_order()" method under the hood to traverse the tree which in turn calls "build_huffman_tree()" method to actually build the tree.
+
+In order to decode, either of the two methods namely "decode_message" or "decode_message_recursion" can be used. Both these functions uses the encoded string stored in the class attribute "encoded_msg".
+
+Time complexity:
+In greedy approach, we put "n" characters into "n" leaves and move upward by creating new nodes by adding two least frequent nodes recursively. At each iteration we need to perform sorting operation to find two least frequent nodes. This sorting operation takes O(log n) time. To encode "n" distinct characters we need "n" such iteration which requires O(n) time. Hence all total encoding requires O(nlogn) times.

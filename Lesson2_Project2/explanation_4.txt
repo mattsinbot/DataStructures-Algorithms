@@ -1,0 +1,9 @@
+is_user_in_group(): 
+Given a user(string) and a group, this function recursively digs into the groups user list to find if user exists in that list. If the current group has sub or sub-sub or deeper groups, the function recursively calls itself to go over all the nested groups.
+The "is_user_in_group" function, actally has a nested "find_user" function which is called in recursive manner.
+
+Time complexity:
+If the number of group and all of nested sub-groups is "n" and each of those groups has "m" users, then in worst-case, finding a given user-name takes O(m*n) times.
+
+Space complexity:
+Using the same analogy as time complexity, the worst case space-complexity would be O(m*n).

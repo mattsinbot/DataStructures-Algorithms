@@ -1,0 +1,11 @@
+The main work geos into creating the "BlockChain" class and modifying "calc_hash" method of "Block" class.
+1. Modifying "calc_hash" method:
+This function id changed in such a way, it can use its "data" attribute to finally return a hash-string out of data.
+Time complexity: creating the "hash-string" is a O(1) operation
+
+2. The main container of "BlockChain" class is a dictionary, named "block_dict". Each block of information is stored 
+as a value of the dictonary whereas keys are generated using "calc_hash" method.
+In order to add linked-list flavor to accessing the data stored in "block_dict", we simply shift the head to point it to the newly created block object. The ultimate block is linked to its prior through the "previous_hash" attribute of the Block object.
+Time complexity:
+"add_block()" method needs O(1) time.
+"print_blockchain()" method needs O(n) time where n is the number of blocks present

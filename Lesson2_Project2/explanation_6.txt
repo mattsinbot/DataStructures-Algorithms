@@ -1,0 +1,14 @@
+In this problem, 3 key functions have been implemented.
+1. intersection(llist_1, llist_2): returns a linked list with elements obtained by union of two given linked-lists.
+
+Given two linked-lists, linked_list_1 and linked_list_2, using to_list() method a we first obtained two lists consist of the elements of linked_list_1 and linked_list_2 respectively. Those two lists then converted to two sets using Python's built-in data structure "set". After that using set.intersection() function, we got a new set with elements which are common in both the sets. The resulting set is then converted to a list. The elements of the resultant list is then appended to a newly instantiated linked-list and returned to the user. 
+The worst case time complexity of this function is dictated by the two main operations: (a) traversing the two given linked-lists -> O(n) (b) appending intersection elements into a new linked-list -> O(n). Hence overall, this function takes O(n). Using the same reasoning we can say that space complexity will also be O(n).
+
+2. union(llist_1, llist_2): returns a linked list with elements obtained by intesection of two given linked-lists.
+
+The implementation follow exactly same steps as in "implementation" function with only difference is that instead of calling "set.intersection()", here we called "set.union()" instead.
+
+The time and space complexity, both are O(n), following the same reasioning as we did for "intersection" function.
+
+3. to_list(self): a method of class "LinkedList", which returns a list, consists of the values of the nodes of the given linked-list.
+Time complexity: O(n). Space complexity: O(n).

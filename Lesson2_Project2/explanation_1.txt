@@ -1,0 +1,26 @@
+The solution consists of three classes, namely "LRU-Cache", "Queue" and "Node".
+While the main code can be found in "LRU-Cache" class, the other two classes are
+used as underlying building blocks.
+The "set()" method, stores data in a dictionary which always maintains its size to be &lt; 5.
+The size of the dictionary is maintained by always deleting the oldest key-value pair
+from the dictionary. Further, whenever a new element is added to the dictionary, the
+corresponding key is also "enqueued" into the "data_queue" (a class attribute) to keep
+track of the order of the "keys" added to the "LRU-Cache".
+The "get()" method, simply first looks for the "key" if that exists in the dictionary. If the
+key does not exist, then it returns -1. On the other hand if the "key" exists, then the
+method first dequeues the same key from the "data_queue" (a class attribute) and again
+enqueues back to it. This how we ensure that we always dequeue the oldest element
+from the queue.
+
+Time complexity:
+In "set()" method, storing the new entry into the "data_store" variable takes O(1) time,
+since it uses a Python dictionary which in turn is a hash-map data structure. Also
+"enqueue"-ing the key into "data_queue" takes constant time, O(1). Further, in cases
+when removal of an element from the key is necessary, the "dequeue"-ing operation
+also takes O(1) time and deleting the oldest key from the "data_store" also takes O(1)
+time. Therefore overall, "set()" method takes O(1) time.
+
+In "get()" method, the "dequeue"-ing and "enqueue"-ing methods, again takes O(1) time
+each. Also fetching the value corresponding to the "key" also takes O(1) time.
+Space complexity:
+Both the variables, "data_store" and "data_queue" require O(n) space where n is the capacity of the cache.
