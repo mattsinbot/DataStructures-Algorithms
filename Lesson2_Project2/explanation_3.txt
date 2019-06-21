@@ -4,3 +4,6 @@ In order to decode, either of the two methods namely "decode_message" or "decode
 
 Time complexity:
 In greedy approach, we put "n" characters into "n" leaves and move upward by creating new nodes by adding two least frequent nodes recursively. At each iteration we need to perform sorting operation to find two least frequent nodes. This sorting operation takes O(log n) time. To encode "n" distinct characters we need "n" such iteration which requires O(n) time. Hence all total encoding requires O(nlogn) times.
+
+Space complexity:
+For "n" distinct characters we need O(n) space. For each of the "n" characters, we need "n" iteration for encoding. Since each iteration involves sorting of "n" elements in worst case, total time complexity O(n^2).

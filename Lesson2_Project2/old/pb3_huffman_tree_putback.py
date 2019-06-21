@@ -104,19 +104,12 @@ class Huffman_Tree:
 		
 	# Encode message
 	def encode_message(self):
-		if len(self.message) == 0:
-			print("No encoding required for empty message")
-			return None
 		self.pre_order() # traverse the tree and generate encodings
 		for ch in self.message:
 			self.encoded_msg += self.encoding_dict[ch]
 
 	# Decode message
 	def decode_message(self):
-		if len(self.message) == 0:
-			print("No decoding available for empty message")
-			return None
-	
 		if (self.root.left_child is None) and (self.root.right_child is None):
 			return self.decode_message_root_only()
 			
@@ -137,8 +130,6 @@ class Huffman_Tree:
 
 	# Decode message recursion
 	def decode_message_recursion(self):
-		if len(self.message) == 0:
-			return "No decoding available for empty message"
 		if (self.root.left_child is None) and (self.root.right_child is None):
 			return self.decode_message_root_only()
 		decoded_str, indx_dict = {}, {}
@@ -183,16 +174,53 @@ def check_test_cases(case_num, msg):
 	print("The size of the encoded data is: {}".format(sys.getsizeof(int(encoded_data))))
 	print("The content of the encoded data is: {}".format(encoded_data))
 	decoded_data = huff_tree.decode_message()
-	# decoded_data = decode_message_recursion()
 	print("The size of the decoded data is: {}".format(sys.getsizeof(decoded_data)))
 	print("The content of the encoded data is: {}".format(decoded_data))
 	print("----------------------------------------\n")
 	
+"""
+# Test case 1:
+print("\nTest case: 1")
+msg = "The bird is the word"
+huff_tree1 = Huffman_Tree(msg)
+huff_tree1.encode_message()
+print(huff_tree1.encoded_msg)
+print(huff_tree1.decode_message())
+print(huff_tree1.decode_message_recursion())
+
+# Test case 2:
+print("\nTest case: 2")
+msg = "Insanity: doing the same thing over and over again and expecting different results"
+huff_tree2 = Huffman_Tree(msg)
+huff_tree2.encode_message()
+print(huff_tree2.encoded_msg)
+print(huff_tree2.decode_message())
+print(huff_tree2.decode_message_recursion())
+
+# Test case 3:
+print("\nTest case: 3")
+msg = "+*/1234"
+huff_tree3 = Huffman_Tree(msg)
+huff_tree3.encode_message()
+print(huff_tree3.encoded_msg)
+print(huff_tree3.decode_message())
+print(huff_tree3.decode_message_recursion())
+
+# Test case 4:
+print("\nTest case: 4")
+msg = "aaaaaaaaa"
+huff_tree4 = Huffman_Tree(msg)
+huff_tree4.encode_message()
+print(huff_tree4.encoded_msg)
+print(huff_tree4.decode_message())
+print(huff_tree4.decode_message_recursion())
+"""
+
 # Test cases:
 message_list = list()
-text1 = "The bird"      # test case 1
-text2 = "name is known" # test case 2
-text3 = "aaaaaaaaa"     # test case 3
+text1 = "The bird"
+text2 = "name is known"
+text3 = "aaaaaaaaa"
 
 message_list.append(text1)
 message_list.append(text2)
@@ -200,15 +228,6 @@ message_list.append(text3)
 
 for num, message in enumerate(message_list):
 	check_test_cases(num, message)
-
-
-# Special test case
-text4 = ""              # test case 4
-print("The content of the data is: {}".format(text4))
-huff_tree = Huffman_Tree(text4)
-huff_tree.encode_message()
-encoded_data = huff_tree.encoded_msg
-decoded_data = huff_tree.decode_message()
 
 """
 Comment:

@@ -6,6 +6,11 @@ Time complexity: creating the "hash-string" is a O(1) operation
 2. The main container of "BlockChain" class is a dictionary, named "block_dict". Each block of information is stored 
 as a value of the dictonary whereas keys are generated using "calc_hash" method.
 In order to add linked-list flavor to accessing the data stored in "block_dict", we simply shift the head to point it to the newly created block object. The ultimate block is linked to its prior through the "previous_hash" attribute of the Block object.
+
 Time complexity:
 "add_block()" method needs O(1) time.
-"print_blockchain()" method needs O(n) time where n is the number of blocks present
+"print_blockchain()" method needs O(n) time where n is the number of 
+blocks present
+
+Space complexity:
+If there are "n" number of blocks to be added to the "BlockChain", then, space complexity is linear with "n", i.e., O(n).
