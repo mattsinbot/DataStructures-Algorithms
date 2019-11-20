@@ -1,0 +1,3 @@
+The heap sort takes O(log n) computation. The main work is done in the while-loop of MaxSumNumbers() function which takes O(n) computations in worst case. Therefore all together, finding the answer takes O(n) computations.
+
+The space complexity is O(n) for heap sort whereas MaxSumNumbers() function takes O(1) space. Hence, total space requirement is O(n).

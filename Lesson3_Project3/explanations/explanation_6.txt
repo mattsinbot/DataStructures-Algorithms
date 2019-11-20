@@ -1,0 +1,1 @@
+In one pass of through the array, maximum and minimum element of the input list has been found. Therefore the time complexity is O(n). Space complexity O(1).

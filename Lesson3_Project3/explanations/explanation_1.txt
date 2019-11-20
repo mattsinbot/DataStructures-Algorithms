@@ -1,0 +1,3 @@
+Comment: the time complexity of Newton's method is
+O(log n) where n is the precision of tolerance. The space complexity
+is O(1).

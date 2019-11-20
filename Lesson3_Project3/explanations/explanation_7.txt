@@ -1,0 +1,3 @@
+Most of the work goes into performing "add_handler" method and "lookup method"
+Time Complexity: is proportional to O(n) for add_handler method if there are n words in the path and O(1) for lookup method since hash-map has been used to store the paths 
+Space Complexity: O(n) for add_handler method and O(1) for loopup method

@@ -1,0 +1,3 @@
+Majority of the work goes into performing "suffixes()" method.
+Time Complexity: If for a given prefix, there are n possible suffixes then they can be found in O(n) time
+Space Complixity: Size of the list of all suffixes is O(n)

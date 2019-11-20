@@ -1,0 +1,9 @@
+Time Complexity:
+O(log n) for pivot finding
+O(log n) for binary search
+Total time complexity: O(log n) + O(log n) ~ O(log n)
+
+Space Complexity:
+O(1) for pivot finding
+O(1) for binary search
+Total time complexity: O(1) + O(1) ~ O(1)

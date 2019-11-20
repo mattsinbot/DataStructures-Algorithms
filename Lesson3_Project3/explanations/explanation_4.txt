@@ -1,0 +1,6 @@
+Comment:
+Time complexity:
+Since we are traversing the array only once, time complexity will be O(n).
+
+Space Complexity:
+Space complexity is O(1), sice in every iteration we are overriding old space when necessary.
